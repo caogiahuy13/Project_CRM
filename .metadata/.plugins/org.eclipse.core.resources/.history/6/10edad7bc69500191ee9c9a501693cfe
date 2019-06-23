@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="plugins/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet" />
+    <link href="plugins/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="css/style-default.css" rel="stylesheet" id="style_color" />
+    <link href="plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+    <link href="plugins/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="plugins/chosen-bootstrap/chosen/chosen.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-datepicker/css/datepicker.css" />
+</head>
+<body>
+
+</body>
+</html>
