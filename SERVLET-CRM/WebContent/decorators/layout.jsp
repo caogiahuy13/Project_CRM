@@ -64,6 +64,7 @@
     <script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.js"></script>
     <script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
     <script type="text/javascript" src="assets/plugins/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
     <!--script for this page only-->
     <script src="assets/js/dynamic-table.js"></script>
 

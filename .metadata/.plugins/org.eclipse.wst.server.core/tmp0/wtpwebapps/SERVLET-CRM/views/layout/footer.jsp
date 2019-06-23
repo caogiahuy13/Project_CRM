@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!-- BEGIN FOOTER -->
 <div id="footer">2019 &copy; Cybersoft CRM.</div>
 <!-- END FOOTER -->
+
+<input id="toastrSuccess" value="<%= request.getAttribute("success")%>"/>
+<input id="toastrError" value="<%= request.getAttribute("error")%>"/>

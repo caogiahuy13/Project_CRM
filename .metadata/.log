@@ -7644,3 +7644,6 @@ Caused by: java.io.IOException: Server returned HTTP response code: 503 for URL:
 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
 	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:864)
 	... 9 more
+
+!ENTRY org.eclipse.jface.text 2 0 2019-06-23 23:43:22.894
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'

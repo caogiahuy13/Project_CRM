@@ -71,7 +71,12 @@ public class AccountController extends HttpServlet{
 	}
 	
 	private void postAddAccount(Account account, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		accountDaoImpl.insert(account);
-		resp.sendRedirect(req.getContextPath() + "/accounts");
+		if (accountDaoImpl.insert(account) > 0) {
+			req.setAttribute("success", "Them moi thanh cong");
+		} else {
+			req.setAttribute("error", "Them moi that bai");
+		}
+		req.setAttribute("accounts", accountDaoImpl.findAll());
+		req.getRequestDispatcher("/views/account/list.jsp").forward(req, resp);
 	}
 }
