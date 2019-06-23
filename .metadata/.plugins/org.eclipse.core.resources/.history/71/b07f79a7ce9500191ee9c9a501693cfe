@@ -1,0 +1,41 @@
+package com.java.dao.impl;
+
+import java.util.List;
+
+import com.java.dao.AccountDao;
+import com.java.model.Account;
+
+public class AccountDaoImpl implements AccountDao{
+
+	@Override
+	public List<Account> findAll() {
+		// Khai báo list sản phẩm
+		List<Account> list = new ArrayList<Account>();
+
+		try (Connection conn = JDBCConnection.getConnection()) {
+			// Khaoi báo đối tượng thực thi truy vấn
+			PreparedStatement statement = conn.prepareStatement(FIND_ALL_QUERY);
+			// Chứa dữ liệu trả về từ database trong đối tượng ResultSet
+			ResultSet res = statement.executeQuery();
+			// Duyệt và lấy dữ liệu từ ResultSet
+			while (res.next()) {
+				// Khai báo đối tượng Account để đóng gói dữ liệu
+				Account account = new Account();
+				account.setId(res.getInt(PROP_ID));
+				account.setFullname(res.getString(PROP_FULLNAME));
+				account.setEmail(res.getString(PROP_EMAIL));
+				account.setPassword(res.getString(PROP_PASSWORD));
+				account.setAddress(res.getString(PROP_ADDRESS));
+				account.setPhone(res.getString(PROP_PHONE));
+				// Add vào list product
+				list.add(account);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+}

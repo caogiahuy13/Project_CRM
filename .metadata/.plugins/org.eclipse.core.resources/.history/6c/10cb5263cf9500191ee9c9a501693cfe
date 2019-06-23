@@ -1,0 +1,8 @@
+package com.java.controller;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet(urlPatterns = {"/accounts")
+public class AccountController {
+
+}

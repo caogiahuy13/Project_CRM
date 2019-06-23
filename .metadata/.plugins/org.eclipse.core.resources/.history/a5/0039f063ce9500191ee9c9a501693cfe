@@ -1,0 +1,7 @@
+package com.java.dao;
+
+import java.util.List;
+
+public interface AccountDAO {
+	public List<Account> findAll();
+}

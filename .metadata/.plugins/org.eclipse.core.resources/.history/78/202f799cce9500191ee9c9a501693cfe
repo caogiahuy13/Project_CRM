@@ -1,0 +1,7 @@
+package com.java.dao.impl;
+
+import com.java.dao.AccountDao;
+
+public class AccountDaoImpl implements AccountDao{
+
+}

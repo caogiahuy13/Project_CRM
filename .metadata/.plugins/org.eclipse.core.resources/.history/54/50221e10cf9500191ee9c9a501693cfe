@@ -1,0 +1,60 @@
+package com.java.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.java.connection.JDBCConnection;
+import com.java.dao.AccountDao;
+import com.java.model.Account;
+
+public class AccountDaoImpl implements AccountDao{
+	
+	private final String FIND_ALL_QUERY = "SELECT * FROM accounts";
+	private final String FIND_BY_ID_QUERY = "SELECT * FROM accounts WHERE account_id = ?";
+	private final String ADD_QUERY = "INSERT INTO accounts (fullname, email, password, phone, address) VALUES (?, ?, ?, ?, ?)";
+	private final String UPDATE_QUERY = "UPDATE accounts SET fullname = ?, email = ?, phone = ?, address = ? WHERE account_id = ?";
+	private final String DELETE_QUERY = "DELETE FROM accounts WHERE account_id = ?";
+	private final String CHECK_LOGIN_QUERY = "SELECT * FROM accounts WHERE email = ? AND password = ?";
+
+	private final String PROP_ID = "account_id";
+	private final String PROP_FULLNAME = "fullname";
+	private final String PROP_EMAIL = "email";
+	private final String PROP_PASSWORD = "password";
+	private final String PROP_ADDRESS = "address";
+	private final String PROP_PHONE = "phone";
+	
+	@Override
+	public List<Account> findAll() {
+		List<Account> list = new ArrayList<Account>();
+
+		try (Connection conn = JDBCConnection.getConnection()) {
+			// Khaoi báo đối tượng thực thi truy vấn
+			PreparedStatement statement = conn.prepareStatement(FIND_ALL_QUERY);
+			// Chứa dữ liệu trả về từ database trong đối tượng ResultSet
+			ResultSet res = statement.executeQuery();
+			// Duyệt và lấy dữ liệu từ ResultSet
+			while (res.next()) {
+				// Khai báo đối tượng Account để đóng gói dữ liệu
+				Account account = new Account();
+				account.setId(res.getInt(PROP_ID));
+				account.setFullname(res.getString(PROP_FULLNAME));
+				account.setEmail(res.getString(PROP_EMAIL));
+				account.setPassword(res.getString(PROP_PASSWORD));
+				account.setAddress(res.getString(PROP_ADDRESS));
+				account.setPhone(res.getString(PROP_PHONE));
+				// Add vào list product
+				list.add(account);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+}
