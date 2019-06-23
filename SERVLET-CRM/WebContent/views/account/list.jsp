@@ -96,7 +96,7 @@
 					</span>
 				</div>
 				<div class="widget-body">
-					<form action="" method="post" id="frmAccount">
+					<form action="<c:url value='/accounts'/>" method="post" id="frmAccount">
 						<div class="row-fluid">
 							<div class="span12">
 
@@ -119,7 +119,7 @@
 								<div class="control-group password-group">
 									<label class="control-label">Nhập lại mật khẩu</label>
 									<div class="controls">
-										<input type="password" class="span12" id="c" name="confirm">
+										<input type="password" class="span12" id="confirm" name="confirm">
 									</div>
 								</div>
 								<div class="control-group">

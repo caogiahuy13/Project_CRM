@@ -5,4 +5,5 @@ import com.java.model.Account;
 
 public interface AccountDao {
 	public List<Account> findAll();
+	public int insert(Account models);
 }

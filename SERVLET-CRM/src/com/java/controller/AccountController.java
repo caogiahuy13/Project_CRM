@@ -8,11 +8,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.java.dao.AccountDao;
 import com.java.dao.impl.AccountDaoImpl;
+import com.java.model.Account;
 
 @WebServlet(urlPatterns = {"/accounts"})
 public class AccountController extends HttpServlet{
-	private AccountDaoImpl accountDaoImpl = new AccountDaoImpl();
+	private AccountDao accountDaoImpl = null;
+	
+	public AccountController() {
+		accountDaoImpl = new AccountDaoImpl();
+	}
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,8 +36,42 @@ public class AccountController extends HttpServlet{
 		}
 	}
 	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("UTF-8");
+		resp.setCharacterEncoding("UTF-8");
+
+		String action = req.getServletPath();
+
+		String fullname = req.getParameter("fullname");
+		String email = req.getParameter("email");
+		String password = req.getParameter("password");
+		String phone = req.getParameter("phone");
+		String address = req.getParameter("address");
+
+		Account model = new Account();
+		model.setFullname(fullname);
+		model.setEmail(email);
+		model.setPassword(password);
+		model.setPhone(phone);
+		model.setAddress(address);
+
+		switch (action) {
+		case "/accounts":
+			postAddAccount(model, req, resp);
+			break;
+		default:
+			break;
+		}
+	}
+	
 	private void getAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setAttribute("accounts", accountDaoImpl.findAll());
 		req.getRequestDispatcher("/views/account/list.jsp").forward(req, resp);
+	}
+	
+	private void postAddAccount(Account account, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		accountDaoImpl.insert(account);
+		resp.sendRedirect(req.getContextPath() + "/accounts");
 	}
 }
