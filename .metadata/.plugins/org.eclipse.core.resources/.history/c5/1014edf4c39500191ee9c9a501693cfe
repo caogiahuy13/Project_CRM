@@ -1,0 +1,13 @@
+package com.java.connection;
+
+import java.sql.Connection;
+
+public class JDBCConnection {
+	public static Connection getConnection() {
+		final String database = "jdbc:mysql://localhost:3306/servlet-crm";
+		final String username = "root";
+		final String password = "";
+		
+		Class.forName("com.mysql.cj.jdbc.Driver");
+	}
+}
