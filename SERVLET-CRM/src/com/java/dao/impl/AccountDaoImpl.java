@@ -71,4 +71,23 @@ public class AccountDaoImpl implements AccountDao{
 		
 		return 0;
 	}
+	
+	@Override
+	public int update(Account model) {
+		try (Connection conn = JDBCConnection.getConnection()) {
+			PreparedStatement statement = conn.prepareStatement(UPDATE_QUERY);
+			statement.setString(1, model.getFullname());
+			statement.setString(2, model.getEmail());
+			statement.setString(3, model.getPhone());
+			statement.setString(4, model.getAddress());
+			statement.setInt(5, model.getId());
+			
+			return statement.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
 }

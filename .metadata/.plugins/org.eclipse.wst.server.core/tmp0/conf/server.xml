@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\My Data\Download\Document\Java\Cybersoft_Project\Project_CRM\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\My Data\Download\Document\Java\Cybersoft_Project\Project_CRM\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\SERVLET-CRM" path="/SERVLET-CRM" reloadable="true" source="org.eclipse.jst.jee.server:SERVLET-CRM"/></Host>
+      <Context docBase="D:\My Data\Download\Document\Java\Cybersoft_Project\Project_CRM\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\My Data\Download\Document\Java\Cybersoft_Project\Project_CRM\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\SERVLET-CRM" path="/SERVLET-CRM" reloadable="true" source="org.eclipse.jst.jee.server:SERVLET-CRM"/><Context docBase="D:\My Data\Download\Document\Java\Cybersoft_Project\Project_CRM\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\CrmApp" path="/CrmApp" reloadable="true" source="org.eclipse.jst.jee.server:CrmApp"/></Host>
     </Engine>
   </Service>
 </Server>

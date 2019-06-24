@@ -1,2 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="com.java.connection.JDBCConnection"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.java.dao.impl.AccountDaoImpl"/>
+<fullyQualifiedTypeName name="com.java.dao.AccountDao"/>
+<fullyQualifiedTypeName name="com.java.controller.AccountController"/>
+<fullyQualifiedTypeName name="com.java.model.Account"/>
+<fullyQualifiedTypeName name="com.myclass.entity.Group"/>
+<fullyQualifiedTypeName name="com.myclass.entity.Status"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="com.myclass.dao.StatusDAO"/>
+<fullyQualifiedTypeName name="com.myclass.dao.StatusDaoImpl"/>
+<fullyQualifiedTypeName name="com.myclass.dao.GroupDAO"/>
+<fullyQualifiedTypeName name="com.myclass.dao.GroupDaoImpl"/>
+<fullyQualifiedTypeName name="com.myclass.entity.Task"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="com.myclass.entity.GroupTask"/>
+<fullyQualifiedTypeName name="com.myclass.dao.AccountDaoImpl"/>
+<fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="com.myclass.entity.StatusCount"/>
+<fullyQualifiedTypeName name="com.myclass.controller.TaskController"/>
+<fullyQualifiedTypeName name="com.myclass.dao.TaskDAO"/>
+<fullyQualifiedTypeName name="com.myclass.dao.TaskDaoImpl"/>
+<fullyQualifiedTypeName name="com.myclass.dao.AccountDAO"/>
+<fullyQualifiedTypeName name="com.myclass.entity.Account"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="com.myclass.util.SessionUtil"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>

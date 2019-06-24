@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/com/myclass/connection/JDBCConnection.java=UTF-8
+encoding//src/com/myclass/controller/AccountController.java=UTF-8
+encoding//src/com/myclass/controller/GroupController.java=UTF-8
+encoding//src/com/myclass/controller/HomeController.java=UTF-8
+encoding//src/com/myclass/controller/JsonController.java=UTF-8
+encoding//src/com/myclass/controller/LoginController.java=UTF-8
+encoding//src/com/myclass/dao/AccountDaoImpl.java=UTF-8
+encoding//src/com/myclass/dao/GroupDaoImpl.java=UTF-8
+encoding//src/com/myclass/filter/AuthFilter.java=UTF-8
